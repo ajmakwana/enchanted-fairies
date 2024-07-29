@@ -15,33 +15,37 @@ body {
 
 @layer components {
 	.container {
-		@apply mx-auto max-w-[94%] md:max-w-[900px] w-[96%];
+		@apply mx-auto md:max-w-[900px];
+		max-width: calc(900px - 30px);
+		width: calc(100% - 30px);
+
 	}
-
-
 
 	.upgrade-con {
 		.items {
-			@apply flex flex-col gap-6 md:text-center px-3 md:px-8;
+			@apply flex flex-col gap-3 md:gap-6 md:text-center px-8 md:px-8;
 
 			.inner {
 				@apply flex flex-row md:flex-col gap-4 items-center;
 
 				.icon {
-					@apply w-24 h-24 flex items-center justify-center border font-body italic font-black text-5xl bg-[#FAF5EC] border-[#E3CA9F] text-tamarillo-950 rounded-tl-[20px] rounded-br-[20px];
+					@apply w-16 h-16 md:w-24 md:h-24 flex items-center justify-center border font-body italic font-black text-[34px] md:text-5xl bg-[#FAF5EC] border-[#E3CA9F] text-tamarillo-950 rounded-tl-[20px] rounded-br-[20px];
+
+
 				}
 
 				h3 {
-					@apply font-roboto text-xl lg:text-2xl lg:text-[28px] font-bold;
+					@apply font-roboto text-xl md:text-[28px] font-bold;
 				}
 
 				.lable {
-					@apply bg-tamarillo-950 px-3 py-1 rounded-md text-center text-[#FAF5EC] text-lg lg:text-xl xl:text-2xl font-bold;
+					@apply bg-tamarillo-950 px-3 py-1 rounded-md text-center text-[#FAF5EC] text-lg md:text-2xl font-bold;
 				}
+
 			}
 
 			p {
-				@apply font-arial text-lg lg:text-2xl text-black/80;
+				@apply font-arial text-lg md:text-2xl text-black/80 capitalize;
 			}
 		}
 	}
@@ -51,24 +55,24 @@ body {
 	}
 
 	.offer-save {
-		@apply absolute -rotate-6 bottom-0 left-0 sm:-bottom-4 sm:-left-4 2xl:-bottom-14 2xl:-left-14 bg-no-repeat p-6 lg:p-8 xl:p-10 2xl:p-14 text-center bg-[url(../images/save-img.svg)];
+		@apply absolute -rotate-6 -bottom-2 left-0 sm:-bottom-4 sm:-left-4 md:-bottom-8 md:-left-8 bg-no-repeat p-6 md:p-8 text-center bg-[url(../images/save-img.svg)];
 		background-size: 100% 100%;
 
 		span {
-			@apply text-white font-extrabold font-roboto text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+			@apply text-white font-extrabold font-roboto text-2xl md:text-[27px];
 		}
 
 		h4 {
-			@apply text-white font-extrabold font-roboto text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+			@apply text-white font-extrabold font-roboto text-3xl md:text-[45px];
 		}
 	}
 
 	.free-shipping {
-		@apply absolute bottom-0 right-0 sm:-bottom-4 sm:-right-4 2xl:-bottom-24 2xl:-right-24 w-32 md:w-40 lg:w-48 xl:w-52 2xl:w-auto;
+		@apply absolute -bottom-2 right-3 sm:-bottom-4 md:-bottom-8 w-32 md:w-40 md:w-auto max-w-52;
 	}
 
 	.my-order-btn {
-		@apply bg-gradient-to-b from-[#338C4C] to-[#56AD6F] rounded-full font-bold font-roboto italic px-10 py-4 transition ease-in-out delay-150 text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white;
+		@apply bg-gradient-to-b from-[#338C4C] to-[#56AD6F] rounded-full font-bold font-roboto italic transition ease-in-out delay-150 text-xl md:text-2xl md:text-4xl text-white border-2 border-[#3FC400] px-6 py-3 md:px-10 md:py-8;
 
 		&:hover {
 			@apply bg-gradient-to-t duration-300;
@@ -91,7 +95,7 @@ body {
 		@apply text-start flex items-center justify-center gap-4 relative;
 
 		h3 {
-			@apply font-body font-black text-black text-2xl lg:text-3xl xl:text-4xl bg-white px-3 md:px-8 relative;
+			@apply font-body font-black text-black text-2xl md:text-4xl bg-white px-3 md:px-8 relative;
 		}
 
 		&:before {
